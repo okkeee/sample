@@ -1,0 +1,86 @@
+Sub Test()
+    UserForm1.Show
+End Sub
+
+
+
+
+Sub Go()
+
+Dim DicName As Variant
+Dim DicCount As Variant
+Dim i As Long
+Dim GetName As String
+Dim myKey As Variant
+Dim myList As Variant
+Dim myItem As Variant
+Dim msg As String
+Dim sheet As String
+
+    MsgBox ActiveWorkbook.Name & "が選択されています。"
+    
+    On Error GoTo Err_TestTraps1
+    Worksheets("ACROSS").Select
+    On Error GoTo 0
+    On Error GoTo Err_TestTraps2
+    Worksheets("ACROSS1").Select
+    On Error GoTo 0
+    On Error GoTo Err_TestTraps3
+    Worksheets("ACROSS2").Select
+    
+    '連想配列
+    Set DicName = CreateObject("Scripting.Dictionary")
+    Set DicCount = CreateObject("Scripting.Dictionary")
+
+    'A列のデータを配列に格納
+    myList = Range("A1", Range("A" & Rows.Count).End(xlUp))
+
+    '配列をループ
+    For i = 2 To UBound(myList)
+
+        '値を変数へ
+        GetName = Cells(i, 1)
+
+        '重複しないリストを連想配列へ
+        If Not DicName.Exists(GetName) Then
+            DicName.Add GetName, GetName
+        Else
+            '重複しているリストを連想配列へ
+            If Not DicCount.Exists(GetName) Then
+                 DicCount.Add GetName, 2
+             Else
+                 '重複件数を数える
+                 DicCount(myList(i, 1)) = DicCount(myList(i, 1)) + 1
+            End If
+        End If
+
+    Next i
+
+    myKey = DicCount.keys
+    myItem = DicCount.items
+
+    'メッセージボックス表示
+    For i = 0 To UBound(DicCount.items)
+        If myKey(i) = "" Then
+            myKey(i) = "セル内 空白"
+        End If
+        
+        msg = msg & myKey(i) & "：" & myItem(i) & vbCrLf
+    Next i
+
+    MsgBox "【重複しているデータ】" & vbCrLf & msg
+
+    Set DicName = Nothing
+    Set DicCount = Nothing
+        Exit Sub
+Err_TestTraps1:
+    msg1 = "エラー1"
+Err_TestTraps2:
+    msg2 = "エラー2"
+Err_TestTraps3:
+    msg3 = "エラー3" & vbCr
+Err_TestTraps4:
+    MsgBox msg1 & vbCrLf & msg2 & vbCrLf & msg3 & vbCrLf
+
+End Sub
+
