@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	/*画像*/
+	.photo {
+		border: 4px black solid;
+	}
+
+	/*上段帯*/
+	.overview {
+		text-align: left;
+		font-size: 40px;
+		color: black;
+		background-color: #98fb98;
+		border: 4px solid;
+	}
+
+	/*上段画像*/
+	.content_top {
+		text-align: center;
+		margin-top: 70px;
+	}
+
+	/*上段画像を横配置*/
+	.mainContainer {
+		display: flex;
+	}
+
+	/*上段画像横幅の配置*/
+	.item_1,
+	.item_2,
+	.item_3 {
+		margin-left: 14%;
+	}
+
+	/*下段帯*/
+	.product_description {
+		font-size: 40px;
+		margin-top: 100px;
+		background-color: #98fb98;
+		border: 4px solid;
+	}
+
+	/*下段画像*/
+	.content_bottom {
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: repeat(4, min-content);
+		justify-content: center;
+		grid-column-gap: 5px;
+	}
+
+	/*下段画像配置*/
+	div.row_spot1,
+	.row_spot2,
+	.row_spot3 {
+		margin: 0 auto;
+		display: contents;
+	}
+</style>
+
+<body>
+	<h1>ページタイトル</h1>
+	<div class="overview">概要</div>
+	<div class="content_top">
+		<div class="mainContainer">
+			<div class="item_1 photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_tonkinese.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="item_2 photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_tonkinese.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="item_3 photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_tonkinese.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="product_description">商品説明動画</div>
+	<div class="content_bottom">
+		<div class="row_spot1">
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+		</div>
+		<div class="row_spot2">
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+		</div>
+		<div class="row_spot3">
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+						<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://allfujixerox.sharepoint.com/sites/allfxja/fx/301/across/SitePages/kmtest_sitepage.aspx" target="_blank">
+					<img src="cat_hair_long.png" width="250" height="250" alt="video">
+				</a>
+			</div>
+		</div>
+	</div>
+</body></html>
